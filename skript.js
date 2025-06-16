@@ -5,7 +5,10 @@ if (userYearOfBornInput === null) {
     alert('You entered empty numbers');
 } else if (isNaN(Number(userYearOfBornInput))) {
     alert('Year must be a number');
-} else {
+} else if (+userYearOfBornInput < 1910 || +userYearOfBornInput >= 2024) {
+    alert('Year must be between 1910 to 2024');
+}
+else {
     const userCityOfResidenceInput = prompt('Enter your city of residence:');
     if (userCityOfResidenceInput === null) {
         alert('You did not want to enter your city of residence');
